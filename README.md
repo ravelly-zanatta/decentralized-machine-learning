@@ -1,9 +1,9 @@
 Decentralized ML with Hyperledger Besu and IPFS
-This project implements a decentralized machine learning model using Logistic Regression, Hyperledger Besu, and IPFS.
-Setup
+
+Este guia assume que você está usando um sistema baseado em Linux (ex.: Ubuntu) ou macOS, mas pode ser adaptado para outros sistemas.
 
 Install Dependencies:
-poetry install
+''poetry install''
 
 
 Setup Hyperledger Besu:
