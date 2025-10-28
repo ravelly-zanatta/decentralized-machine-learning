@@ -4,21 +4,22 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import log_loss
 import pickle
 
-def load_and_split_dataset(dataset_path='dataset.csv', num_nodes=2, node_id=0, is_tester=False, trainer_position=-1):
+# Prepare the dataset
+def load_and_split_dataset(dataset_path='dataset.csv', num_nodes=4, node_id=0, is_tester=False, trainer_position=-1):
     try:
         df = pd.read_csv(dataset_path)
         X = df[['medication', 'frequency', 'dose']]
         y = df['target']
     
-        # Tratar valores ausentes
+        # Handle missing values
         X = X.dropna()
-        y = y[X.index]  # garantir alinhamento entre X e y após dropna()
+        y = y[X.index]  # Ensure alignment between X and y after dropna()
 
-        # Converter variáveis categóricas em variáveis dummy
+        # Convert categorical variables into dummy variables
         X = pd.get_dummies(X, columns=['medication'])
         
         print("numero de festures:", X.shape[1])
-        # Separar teste final
+        # Separate final test set
         print("Test size:", 1 / num_nodes)
         #X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=(1 / num_nodes), shuffle=True, stratify=y, random_state=42)
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, shuffle=True, stratify=y, random_state=42)
@@ -67,7 +68,7 @@ def set_model_params(model, params):
     return model
 
 def set_initial_params(model):
-    model.coef_ = np.zeros((1, 23))  # 3 features: Medicamentos, Dose, Frequencia
+    model.coef_ = np.zeros((1, 23))  # 3 features: Medication, Dose, Frequency
     model.intercept_ = np.zeros(1)
     return model
 
