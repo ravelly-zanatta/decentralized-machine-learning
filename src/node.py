@@ -4,10 +4,9 @@ import json
 from web3 import Web3
 from dotenv import load_dotenv
 from sklearn.linear_model import LogisticRegression
-from sklearn.tree import DecisionTreeClassifier, plot_tree
 from sklearn.metrics import log_loss, precision_score, recall_score, f1_score, confusion_matrix
 import pickle
-from utils import load_and_split_dataset, get_model_parameters, set_model_params, set_initial_params, aggregate_parameters, set_model_params_test
+from utils import load_and_split_dataset, get_model_parameters, set_initial_params, aggregate_parameters, set_model_params_test
 from ipfs_utils import save_to_ipfs, load_from_ipfs
 
 load_dotenv()
