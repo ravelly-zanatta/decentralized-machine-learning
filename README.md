@@ -77,7 +77,7 @@ This guide assumes that you are using a Linux-based system (e.g., Ubuntu) or mac
     - **CONTRACT_ABI**: Copy the ABI from Remix IDE and paste it here.
  
 ## Run Training:
-- Deploy the contract in Remix IDE.
+- Deploy the contract in Remix IDE (If you prefer, you can use `deploy_contract.py`).
 - Paste the contract address into `CONTRACT_ADDRESS` in the `.env` file.
 - Start IPFS:
   ```
