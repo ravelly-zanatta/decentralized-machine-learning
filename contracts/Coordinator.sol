@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-contract SLCoordinator {
+contract Coordinator {
     address public owner;
     uint256 public currentRound;
     uint256 public totalRounds;
