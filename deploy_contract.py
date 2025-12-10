@@ -10,7 +10,7 @@ def deploy_contract():
     web3 = Web3(Web3.HTTPProvider(ganache_url))
     account = web3.eth.account.from_key(os.getenv("PRIVATE_KEY"))
     
-    with open("contracts/SLCoordinator.json") as f:
+    with open("contracts/Coordinator.json") as f:
         contract_data = json.load(f)
     
     #abi = contract_data["abi"]
