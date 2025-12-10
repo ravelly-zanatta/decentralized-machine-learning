@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "flchain-decentralized-1"
+name = "decentralized-machine-learning"
 version = "0.1.0"
 description = "Decentralized ML model with Hyperledger Besu and IPFS"
 authors = ["Your Name <your.email@example.com>"]
