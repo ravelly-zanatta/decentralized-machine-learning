@@ -24,7 +24,7 @@ class Node:
         private_key_env_name = f"PRIVATE_KEY_{node_id}"
         private_key = os.getenv(private_key_env_name)
         self.account = self.web3.eth.account.from_key(private_key)
-        with open("contracts/SLCoordinator.json") as f:
+        with open("contracts/Coordinator.json") as f:
             contract_data = json.load(f)
         abi = contract_data["abi"]
         self.contract = self.web3.eth.contract(address=contract_address, abi=abi)
